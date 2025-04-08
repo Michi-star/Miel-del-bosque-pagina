@@ -1,0 +1,157 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background-image: url("Imagenes/fondo dorado2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: black;
+}
+
+header {
+    background-image: url("Imagenes/fondo2.png");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 190px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.volverAcerca {
+    font-weight: bold;
+    background-color: #ffffff;
+    border: solid  1px;
+    padding: 10px 20px; /* Reducir el tamaño del padding en los botones */
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px; 
+    width: 180px;  /* Reducir el tamaño de los botones */
+    box-sizing: border-box; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: black;
+    font-size: 1.0em; 
+    text-align: center;
+}
+
+.volverAcerca:hover {
+    background-color: #DAA520;
+    transform: scale(1.05);
+    color: white;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.titulo-seccion {
+    
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    font-size: 2em;
+}
+
+.contenido {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 20px; /* Espacio inferior */
+    box-sizing: border-box;
+}
+
+.texto {
+    margin-bottom: 20px; /* Espacio entre el texto y el contacto */
+    text-align: justify; /* Justifica el texto */
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos de contacto */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    margin: 10px; /* Espacio entre los iconos de contacto */
+}
+
+.contacto-item img {
+    width: 30px;
+    margin-right: 5px;
+}
+.volver {
+    background-image: url("Imagenes/volver.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambiar dirección de los elementos del header a columna */
+        align-items: center; /* Centrar los elementos */
+        height: auto; /* Ajustar altura */
+        padding: 15px; /* Reducir padding */
+    }
+
+    .logo img {
+        width: 160px; /* Reducir el tamaño del logo */
+        margin-right: 0;
+    }
+
+    .home-icon img {
+        width: 30px; /* Mantener tamaño del ícono */
+    }
+
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Reducir padding aún más */
+    }
+
+    .logo img {
+        width: 140px; /* Reducir tamaño del logo */
+    }
+
+    .home-icon img {
+        width: 25px; /* Reducir tamaño del ícono */
+    }
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Pedido</title>
+    <link rel="stylesheet" href="estilo_pedido.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="formulario">
+            <div class="logo">
+                <img src="Imagenes/Logo.png" alt="Logo Miel del Bosque">
+                <h2>Miel del Bosque</h2>
+            </div>
+            <form action="" onsubmit="return false;">
+                <div class="campo">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div class="campo">
+                    <label for="pedido">Pedido</label>
+                    <input type="text" id="pedido" name="pedido">
+                </div>
+                <div class="campo">
+                    <label for="pago">Método de pago</label>
+                    <input type="text" id="pago" name="pago">
+                </div>
+                <button type="button" class="Boton_Comprar" id="enviar" onclick="enviarPedido()">Enviar Pedido</button>
+            </form>
+        </div>
+    </div>
+    <button class="Volver">Volver</button>
+    <script src="funcionamientopedido.js"></script>
+</body>
+</html>

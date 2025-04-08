@@ -1,0 +1,151 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.formulario {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.Volver {
+    font-weight: bold;
+    background-color: #ffffff;
+    border: solid 1px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 180px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    color: black;
+    font-size: 1.0em;
+    text-align: center;
+    position: fixed; /* Usar fixed para la posición fija en la pantalla */
+    z-index: 100;
+}
+
+/* En pantallas grandes (por defecto) el botón estará en la esquina inferior derecha */
+@media (min-width: 769px) {
+    .Volver {
+        bottom: 20px;
+        right: 20px; /* Posicionarlo en la esquina inferior derecha */
+        transform: none; /* Eliminar cualquier transformación */
+    }
+}
+
+/* En pantallas pequeñas (768px o menos) el botón estará centrado */
+@media (max-width: 768px) {
+    .Volver {
+        bottom: 20px;
+        left: 50%; /* Centrado horizontal */
+        transform: translateX(-50%); /* Ajuste para centrarlo exactamente */
+    }
+}
+
+.Volver:hover {
+    background-color: #DAA520; /* Cambio de color de fondo */
+    color: white;
+}
+
+input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.Boton_Comprar {
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Boton_Comprar:hover {
+    background-color: #DAA520;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    .formulario {
+        width: 80%;
+        padding: 20px;
+    }
+    .logo img {
+        width: 120px;
+    }
+    input[type="text"] {
+        padding: 8px;
+    }
+    .Boton_Comprar {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario {
+        width: 90%;
+        padding: 15px;
+    }
+    .logo img {
+        width: 100px;
+    }
+    input[type="text"] {
+        padding: 6px;
+    }
+    .Boton_Comprar {
+        padding: 10px 15px;
+    }
+}

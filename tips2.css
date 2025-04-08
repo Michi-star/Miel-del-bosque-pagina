@@ -1,0 +1,178 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-image: url(Imagenes/fondo2.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-top: 15px;
+    width: 190px;
+    margin-right: 10px;
+}
+
+
+.volverTips {
+    font-weight: bold;
+    background-color: #ffffff;
+    border: solid  1px;
+    padding: 10px 20px; /* Reducir el tamaño del padding en los botones */
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px; 
+    width: 180px;  /* Reducir el tamaño de los botones */
+    box-sizing: border-box; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: black;
+    font-size: 1.0em; 
+    text-align: center;
+}
+
+.volverTips:hover {
+    background-color: #DAA520;
+    transform: scale(1.05);
+    color: white;
+}
+
+main {
+    margin-top: 8%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor-servicios {
+    gap: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+/* Estilos generales para los botones */
+.Produccion, .Cuidado, .espacio {
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9em;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: black;
+    position: relative; /* Importante para contener el texto dentro del botón */
+    overflow: hidden; /* Evita que el texto se salga del botón */
+}
+
+/* Estilo para el texto alternativo */
+.texto-alternativo {
+    position: absolute;
+    top: 
+    0px; /* Añadido un margen para que no quede pegado al borde */
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px 20px;
+    background-color:  #CD7F32;
+    border-radius: 50px;
+    box-sizing: border-box; /* Incluye el padding y el border en el tamaño */
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    text-align: left;
+    white-space: normal;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilo para la barra de desplazamiento */
+.texto-alternativo::-webkit-scrollbar {
+    width: 8px;
+}
+
+.texto-alternativo::-webkit-scrollbar-thumb {
+    background-color: #a15911;
+    border-radius: 4px;
+}
+
+.texto-alternativo::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Media queries para hacer el header responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambiar dirección de los elementos del header a columna */
+        align-items: center; /* Centrar los elementos */
+        height: auto; /* Ajustar altura */
+        padding: 15px; /* Reducir padding */
+    }
+
+    .logo img {
+        width: 160px; /* Reducir tamaño del logo */
+        margin-right: 0;
+    }
+
+    .home-icon img {
+        width: 30px; /* Mantener tamaño del ícono */
+    }
+
+    .contenedor-servicios {
+        flex-direction: column; /* Disponer los servicios en columna */
+        align-items: center; /* Centrar los elementos */
+        gap: 20px; /* Reducir el espacio entre servicios */
+    }
+
+    .Produccion, .Cuidado, .espacio {
+        width: 250px; /* Ajustar el tamaño de los servicios */
+        height: 150px; /* Reducir altura */
+        font-size: 1.5em; /* Reducir tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Reducir padding aún más */
+    }
+
+    .logo img {
+        width: 140px; /* Reducir tamaño del logo */
+    }
+
+    .home-icon img {
+        width: 25px; /* Reducir tamaño del ícono */
+    }
+
+    .contenedor-servicios {
+        gap: 15px; /* Ajustar el espacio entre servicios */
+    }
+
+    .Produccion, .Cuidado, .espacio {
+        width: 220px; /* Ajustar el tamaño de los servicios */
+        height: 140px; /* Reducir altura */
+        font-size: 1.3em; /* Reducir tamaño de la fuente */
+    }
+}

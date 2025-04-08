@@ -1,0 +1,208 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-image: url(Imagenes/fondo2.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-top: 15px;
+    width: 190px; /* Ajuste del tamaño del logo */
+    margin-right: 10px;
+}
+
+.home-icon img {
+    width: 30px; /* Tamaño del icono de inicio */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    justify-content: center;
+}
+
+.volverInsumos {
+    font-weight: bold;
+    background-color: #ffffff;
+    border: solid  1px;
+    padding: 10px 20px; /* Reducir el tamaño del padding en los botones */
+    border-radius: 10px;
+    cursor: pointer;
+    height: 40px; 
+    width: 180px;  /* Reducir el tamaño de los botones */
+    box-sizing: border-box; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: black;
+    font-size: 1.0em; 
+    text-align: center;
+}
+
+.volverInsumos:hover {
+    background-color: #DAA520;
+    transform: scale(1.05);
+    color: white;
+}
+
+.producto {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aseguramos que los botones estén bien distribuidos */
+}
+
+.producto img {
+    max-width: 50%;  /* Reducir el tamaño de la imagen (ancho del 50%) */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;  /* Reducir el espacio entre la imagen y los botones */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  /* Centra la imagen dentro de su contenedor */
+}
+.ver-detalles, .ocultar-detalles {
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    border: none;
+    padding: 12px 24px; 
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px 0; 
+    height: 50px; 
+    width: 200px; 
+    box-sizing: border-box; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: black;
+    font-size: 1.0em; 
+    text-align: center; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+/* Aseguramos que los botones estén centrados en su contenedor */
+.producto .detallesProducto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden; 
+}
+
+/* Aseguramos que el contenedor de los productos esté centrado */
+.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;  
+    overflow: hidden; 
+}
+
+/* El hover de los botones se escala, pero no se desbordará */
+.producto button:hover, .carrito:hover {
+    background-color: #DAA520;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    color: white;
+    overflow: hidden; /* Asegura que no se desborde fuera del contenedor */
+}
+
+/* Aseguramos que el contenedor de los detalles tenga un espacio adecuado */
+.detallesProducto {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    overflow: hidden; /* Para que no haya desbordamientos */
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambiar la dirección de los elementos del header a columna */
+        align-items: center; /* Alinear los elementos al centro */
+        height: auto; /* Ajustar la altura del header */
+        padding: 15px; /* Reducir padding en pantallas medianas */
+    }
+
+    .logo img {
+        width: 160px; /* Reducir tamaño del logo */
+        margin-right: 0;
+    }
+
+    .home-icon img {
+        width: 30px; /* Mantener el tamaño del ícono de inicio */
+    }
+
+    .productos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+
+    .producto-extra {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Reducir padding para pantallas pequeñas */
+    }
+
+    .logo img {
+        width: 140px; /* Reducir tamaño del logo */
+    }
+
+    .home-icon img {
+        width: 25px; /* Reducir tamaño del ícono de inicio */
+    }
+
+    .productos-container {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+
+    .producto {
+        font-size: 1em; /* Reducir tamaño del texto */
+        padding: 5px; /* Reducir padding */
+    }
+
+    .producto button {
+        padding: 6px 12px; /* Ajuste de tamaño de los botones */
+        font-size: 0.9em; /* Ajustar tamaño de la fuente en los botones */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reducir tamaño del título */
+    }
+}

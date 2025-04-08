@@ -1,0 +1,215 @@
+body {
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: none;
+    height: 100px;
+    margin: 0px;
+}
+
+.Logo1 {
+    display: flex;
+    align-items: center;
+}
+
+.Logo1 img {
+    margin-top: 15px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.slogan {
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pedido {
+    background: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 3%;
+    
+}
+
+.pedido:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px;
+    width: 100%; /* Ancho del contenedor de las tarjetas */
+    max-width: 1200px; /* Ancho máximo */
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid #d2b48c;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(255, 254, 254, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.card-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    opacity: 0.85; /* Añade opacidad al 50% */
+}
+
+/*Ejemplos de cómo añadir las imágenes de fondo*/
+#productos .card-image {
+    background-image: url("Imagenes/Productos.jpg");
+    background-size: cover;
+}
+
+#insumos .card-image {
+    background-image: url("Imagenes/Insumos.png");
+}
+
+#tips .card-image {
+    background-image: url("Imagenes/Tips.png");
+}
+
+#acerca .card-image {
+    background-image: url("Imagenes/Acerca.jpg");
+}
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.BotonProductos,
+.BotonInsumos,
+.BotonTips,
+.BotonAcerca {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    height: 40px;
+    width: 100%;
+    background-image: url(Imagenes/fondo\ dorado2.png);
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: black;
+}
+
+.BotonProductos:hover,
+.BotonInsumos:hover,
+.BotonTips:hover,
+.BotonAcerca:hover {
+    background-color: #DAA520;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+    header {
+        flex-direction: column; /* Cambiar la dirección de los elementos del header a columna */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+        height: auto; /* Permitir que el header se ajuste a su contenido */
+    }
+    .Logo1 img {
+        width: 150px; /* Reducir el tamaño del logo */
+        margin-right: 0;
+    }
+    .slogan {
+        width: 90%; /* Ajustar el tamaño del slogan */
+        font-size: 16px; /* Reducir el tamaño del texto */
+        margin-top: 10px; /* Separar un poco el slogan */
+    }
+    
+    /* Centrar el botón "pedido" y añadir un margen entre el slogan y el botón */
+    .pedido {
+        margin: 20px auto 0; /* Centrar el botón y añadir espacio superior */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    .card-image {
+        height: 250px; /* Reducir la altura de la imagen de la tarjeta en pantallas muy pequeñas */
+    }
+    .Logo1 img {
+        width: 150px; /* Reducir el tamaño del logo en pantallas pequeñas */
+    }
+    .slogan {
+        width: 90%; /* Ajustar el tamaño del slogan */
+        font-size: 16px; /* Reducir el tamaño del texto */
+    }
+    .BotonProductos,
+    .BotonInsumos,
+    .BotonTips,
+    .BotonAcerca {
+        font-size: 20px; /* Reducir el tamaño de los botones */
+        height: 35px; /* Reducir la altura de los botones */
+    }
+    
+    /* Centrar el botón "pedido" y añadir un margen entre el slogan y el botón */
+    .pedido {
+        margin: 20px auto 0; /* Centrar el botón y añadir espacio superior */
+    }
+}
